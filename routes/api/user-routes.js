@@ -1,4 +1,5 @@
 const router = require('express').Router();
+const { valid } = require('semver');
 const { User } = require('../../models');
 
 //GET users
@@ -46,6 +47,27 @@ router.post('/', (req, res) => {
         res.status(500).json(err)
     });
 });
+
+router.post('/login', (req, res) => {
+    User.findOne({
+        where: {
+            username: req.body.username
+        }
+    }).then(dbUserData => {
+        if (!dbUserData) {
+            res.status(400).json({ message: 'No user with that username!'});
+            return;
+        }
+
+        const validPassword = dbUserData.checkPassword(req.body.password);
+
+        if (!validPassword) {
+            res.status(400).json({ message: 'Incorrect password! '});
+            return;
+        }
+        res.json({ user: dbUserData, message: 'Login successful!' })
+    })
+})
 
 //Put a user
 router.put('/:id', (req, res) => {
