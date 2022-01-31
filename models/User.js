@@ -22,7 +22,7 @@ User.init(
         },
         //password column
         password: {
-            types: DataTypes.STRING,
+            type: DataTypes.STRING,
             allowNull: false
         }
     },
