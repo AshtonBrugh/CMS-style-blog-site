@@ -16,13 +16,13 @@ User.init(
         id: {
             type: DataTypes.INTEGER,
             allowNull: false,
+            primaryKey: true,
             autoIncrement: true
 
         },
         //username column
         username: {
             type: DataTypes.STRING,
-            primaryKey: true,
             allowNull: false
         },
         //password column
