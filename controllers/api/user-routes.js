@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const { valid } = require('semver');
-const { User, Post } = require('../../models');
+const { User, Post, Comment } = require('../../models');
 
 //GET users
 router.get('/', (req, res) => {
@@ -24,7 +24,7 @@ router.get('/:id', (req, res) => {
         include: [
             {
                 model: Post,
-                attributes: ['id', 'title', 'contents', 'created_at']
+                attributes: ['id', 'title', 'content', 'created_at']
             },
             {
                 model: Comment,

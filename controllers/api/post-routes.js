@@ -2,13 +2,12 @@ const router = require('express').Router();
 const { Post, User, Comment } = require('../../models');
 
 //get all posts
-// get all users
 router.get('/', (req, res) => {
     console.log('======================');
     Post.findAll({
       attributes: [
         'id',
-        'contents',
+        'content',
         'title',
         'created_at',
       ],
@@ -73,7 +72,7 @@ router.get('/:id', (req, res) => {
 router.post('/', (req, res) => {
     Post.create({
         title: req.body.title,
-        contents: req.body.contents,
+        content: req.body.content,
         user_id: req.body.user_id
     })
     .then(dbPostData => res.json(dbPostData))
