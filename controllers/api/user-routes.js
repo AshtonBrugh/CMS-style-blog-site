@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const { User, Post, Comment } = require('../../models');
+const withAuth = require('../../utils/auth');
 
 //GET users
 router.get('/', (req, res) => {
@@ -107,7 +108,7 @@ router.post('/logout', (req, res) => {
 })
 
 //Put a user
-router.put('/:id', (req, res) => {
+router.put('/:id', withAuth, (req, res) => {
     User.update(req.body, {
         where: {
             id: req.params.id
@@ -127,7 +128,7 @@ router.put('/:id', (req, res) => {
 });
 
 //Delete a user
-router.delete('/:id', (req, res) => {
+router.delete('/:id', withAuth, (req, res) => {
     User.destroy({
         attributes: { exclude: ['password'] },
         where: {
