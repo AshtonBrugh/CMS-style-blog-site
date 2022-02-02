@@ -1,5 +1,4 @@
 const router = require('express').Router();
-const { valid } = require('semver');
 const { User, Post, Comment } = require('../../models');
 
 //GET users
