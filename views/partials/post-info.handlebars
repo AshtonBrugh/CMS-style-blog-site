@@ -1,11 +1,16 @@
+<container class="container">
 <article class="post">
-            <div class="title">
+            <div class="post-title">
                 <span>{{title}}</span><br>
+                </div>
+                <div class="content">
                 <span>{{content}}</span>
                 </div>
                 <div class="meta">
                     Post by {{user.username}} on {{format_date created_at}}
                     |
-                <a href="/post/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a>
+                <a class="comments" href="/post/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a>
                 </div>
         </article>
+</container>
+

@@ -1,23 +1,26 @@
-<section>
+ 
+<section class="new-post-container">
     <h2>Create New Post</h2>
 
-    <form class="new-post-form">
+    <form class="new-post">
+      <div class="title-content">
         <div>
-            <label for="post-title">Title</label>
-            <input type="text" id="post-title" name ="post-title">
+            <label class="post-title" for="post-title">Title:</label>
+            <input type="text" id="post-title" name= "post-title">
         </div>
         <div>
-            <label for="post-content">Content</label>
+            <label class="post-title" for="post-content">Content:</label>
             <input id="post-content" name="post-content"/>
+            </div>
         </div>
-        <button type="submit" class="button">Create</button>
+        <button id="create-btn" type="submit" class="button">Create</button>
     </form>
 </section>
 
 {{#if posts.length}}
-<section>
-  <h2>Your Posts</h2>
-  <ul>
+<section class="your-posts">
+  <h2 class="your-post-title">Your Posts</h2>
+  <ul class="ul-your-post">
     {{#each posts as |post|}}
     <li>
       {{> post-info post}}
