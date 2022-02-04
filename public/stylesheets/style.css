@@ -91,17 +91,21 @@ ul {
 }
 
 
-.new-post, .edit-post-form {
+.new-post, .edit-post-form, .login-form, .signup-form {
     display: flex;
     border-style: solid;
     align-items: center;
     background: white;
-    padding: 1rem 4rem 1rem 4rem;
+    padding: 1rem 7rem;
     flex-direction: column;
     border-radius: .5rem;
     box-shadow: 10px 5px 5px black;
     transition-duration: 0.9s;
 
+}
+
+.login-form, .signup-form {
+    width: 30%;
 }
 
 
@@ -165,14 +169,31 @@ ul {
 }
 
 .edit-post-title, .edit-post-content {
-    margin: .5rem;
     display: flex;
+    align-items: center;
 }
 
 .edit-post-content {
     height: 10rem;
 }
 
+.login-signup-btn {
+    display: flex;
+    margin: 1rem;
+    background-color: #c2ffbc;
+    border-radius: 4px;
+}
+
+.login-form-container, .signup-form-container {
+    display: flex;
+    justify-content: center;
+    margin: 4rem;
+    margin-top: 0;
+}
+
+.login-signup-title {
+    text-align: center;
+}
 
 
 
