@@ -1,7 +1,6 @@
  
 <section class="new-post-container">
-    <h2>Create New Post</h2>
-
+    <h2 class="new-post-container-title">Create New Post</h2>
     <form class="new-post">
       <div class="title-content">
         <div>
@@ -10,7 +9,7 @@
         </div>
         <div>
             <label class="post-title" for="post-content">Content:</label>
-            <input id="post-content" name="post-content"/>
+            <textarea id="post-content" name="post-content"</textarea></textarea>
             </div>
         </div>
         <button id="create-btn" type="submit" class="button">Create</button>
@@ -19,8 +18,8 @@
 
 {{#if posts.length}}
 <section class="your-posts">
-  <h2 class="your-post-title">Your Posts</h2>
   <ul class="ul-your-post">
+    <h2 class="your-posts-title">Your Posts</h2>
     {{#each posts as |post|}}
     <li>
       {{> post-info post}}

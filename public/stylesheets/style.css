@@ -58,7 +58,7 @@ body {
     transition-duration: 0.9s;
     background-color: white;
     padding: 1rem;
-
+  
 }
 
 .container:hover {
@@ -76,18 +76,27 @@ ul {
 .new-post-container {
     display: grid;
     justify-content: center;
-    width: 100%;
-    
+    width: 100%;    
+}
+
+.new-post-container-title {
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.edit-post {
+    display: grid;
+    justify-content: center;
 }
 
 
-.new-post {
+.new-post, .edit-post-form {
     display: flex;
-    justify-content: center;
     border-style: solid;
     align-items: center;
     background: white;
-    padding: 1rem;
+    padding: 1rem 4rem 1rem 4rem;
     flex-direction: column;
     border-radius: .5rem;
     box-shadow: 10px 5px 5px black;
@@ -95,10 +104,14 @@ ul {
 
 }
 
+
 #create-btn {
     width: 30%;
     margin: 1rem;
+    border-radius: 4px;
+    background-color: #a5e8fc;
 }
+
 
 .post-title {
     font-size: min(4.1vw, 1rem);
@@ -108,9 +121,15 @@ ul {
     display: flex;
     align-items: center;
     border-radius: 4px;
+    width: 15rem;
 }
 
-.post-list, .your-posts {
+#post-content {
+    height: 12rem;
+   
+}
+
+.post-list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 2rem; 
@@ -118,13 +137,41 @@ ul {
     padding-left: 0;
 }
 
-
-.your-post-title {
+.your-posts {
     display: flex;
     justify-content: center;
+    margin-top: 3rem;
+}
+.ul-your-post {
+    display: flex;
+    flex-direction: column;   
 }
 
+.your-posts-title {
+    text-align: center;
+}
 
+.edit-link, .view-comments {
+    text-decoration: none;
+    color: black;
+}
+
+.post-btn {
+    margin: .5rem;
+    width: 50%;
+    border-radius: 4px;
+    background-color: #c2ffbc;
+
+}
+
+.edit-post-title, .edit-post-content {
+    margin: .5rem;
+    display: flex;
+}
+
+.edit-post-content {
+    height: 10rem;
+}
 
 
 
