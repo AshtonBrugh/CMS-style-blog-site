@@ -58,6 +58,7 @@ body {
     transition-duration: 0.9s;
     background-color: white;
     padding: 1rem;
+    margin: 1rem;
   
 }
 
@@ -195,5 +196,9 @@ ul {
     text-align: center;
 }
 
+.post-title {
+    text-decoration: underline;
+    font-size: 1.2rem;
+}
 
 
